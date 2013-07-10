@@ -5,15 +5,11 @@ var app = express.createServer(express.logger());
 var fs = require('fs');
 
 app.get('/', function(request, response) {
- var outstring;
- fs.readFile('./index.html' function read(err, data) {
-     if (err) {
-	 throw err;
-     }
-     outstring = data;
-   }  
- );
-   response.send(outstring);
+    var outstring;
+    var buffer = new buffer();
+    outstring = buffer.toString('utc 8', fs.readFileSync("index.html")); 
+
+    response.send(outstring);
 }
 
 
