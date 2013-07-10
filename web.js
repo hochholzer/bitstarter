@@ -10,7 +10,7 @@ app.get('/', function(request, response) {
     outstring = buffer.toString('utc 8', fs.readFileSync("index.html")); 
 
     response.send(outstring);
-}
+});
 
 
 var port = process.env.PORT || 5000;
